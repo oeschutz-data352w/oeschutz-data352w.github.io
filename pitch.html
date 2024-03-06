@@ -26,9 +26,7 @@
     <script>   
         function showtext()
         {
-            let sitetitle = document.getElementById("software-title");
-            sitetitle.innerText = "Humane Reductions Blocking Change";
-            alert(sitetitle.innerText);
+            document.getElementById("software-title").textContent = "Humane Reductions Blocking Change";
         }
     </script>
   </head>
@@ -42,6 +40,6 @@
             <li>This software minimizes risk of loss by providing solutions to employee satisfaction in lieu of recurring payment increases</li>
         </ul>
     </div>
-    <button onclick="showtext">Click here!</button>
+    <button onclick="showtext()">Click here!</button>
   </body>
 </html>
