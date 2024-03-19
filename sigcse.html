@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SIGCSE response</title>
+        <script>
+            function draw(){
+                const plot = document.getElementById("canvas");
+                const ctx = plot.getContext("2d");
+                const width = plot.width;
+                const height = plot.height;
+                ctx.arc(width/2, height/2, width/8, 0, 2 * Math.PI);
+                ctx.fillStyle = "cornflowerblue";
+                ctx.fill();
+                
+            }
+        </script>
+    </head>
+    <body onload="draw()">
+        <p>
+            SIGCSE is a large, well-known organization, but they do not have the best practices when accepting or declining proposals for their annual technical symposium. This article by Dr. Nicki Washington shows the amount of additional pressure that is put on people outside the ‘norm’, particularly Black women, when it comes to getting their proposals approved. She goes through several parts of the reviews she received as explanation for why her proposal was rejected, none of which make particular sense with knowledge of the instructions given. In the “Relevance and Interest” section, one reviewer was blatantly hypocritical, contradicting themself two sentences prior when they state that they can’t assess the relevance of the panel; another noted that the community benefit wasn’t discussed, while it very clearly was. The reviewers also showed significant bias towards tenure-track faculty members with PhDs, stating that “Given that some panelists are not a full-time tenure track faculty, it is a bit difficult to assess their technical depth.” The panel in question focused on identity-inclusive computing, and panelists were carefully selected to give a full range of voices in the field of K-16 education. The reviewer’s statement ignores the fact that tenure track faculty are not necessarily the best spokespeople for K-12 education, as that is not the field they work in. Additionally, not having a PhD doesn’t make a person less qualified to discuss computing or education. The proposals were not required to have citations, but Dr. Washington’s proposal was marked off for only having one. Her citation was of bell hooks’ <em>Teaching to Transgress</em>, which is what directly inspired the panel, and therefore is extremely reasonable to have as the only citation, especially in a situation where citations are not required. Generally, the reviewers seemed to expect Dr. Washington’s team to go well above and beyond the stated requirements, and also overlooked much of what was clearly stated in the proposal. When reviewing something to determine if it should be included in the program, it is important to hold every proposal to the same standard, and not to allow things through in some proposals and reject other proposals due to those same things. 
+        </p>
+        <p style="font-weight: bold;">
+            Because the committee approved other proposals that didn’t meet these unstated criteria, there is significant evidence of discriminatory practices in the selection process for panels at SIGCSE. 
+        </p>
+        <canvas id="canvas" width="400" height="400" style="outline-style: solid;"></canvas>
+    </body>
+</html>
