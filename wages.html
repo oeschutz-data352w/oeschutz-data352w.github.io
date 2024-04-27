@@ -1,10 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Wages</title>
-  </head>
-  <body>
-    <p> put text of response here </p>
-    <!-- put plot here -->
-  </body>
+    <head>
+        <style>
+            body {
+                background-color: #32373A;
+                color: white;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+        </style>
+        <script>
+            function render() {
+                let chart = new CanvasJS.Chart("chartContainer", {
+                    theme: "dark2", // "light2", "dark1", "dark2"
+                    animationEnabled: false, // change to true		
+                    title:{
+                        text: "Share of Earned Wages Not Paid"
+                    },
+                    axisX: {
+                        title: "State"
+                    },
+                    axisY: {
+                            title: "Percent not paid",
+                            minimum: 0
+                        },
+                    data: [
+                    {
+                        // Change type to "bar", "area", "spline", "pie",etc.
+                        type: "column",
+                        dataPoints: [
+                            {label: "California", y: 22.3},
+                            {label: "Florida", y: 20.1},
+                            {label: "Georgia", y: 25.9},
+                            {label: "Illinois", y: 20.6},
+                            {label: "Michigan", y: 27.3},
+                            {label: "New York", y: 22.8},
+                            {label: "North Carolina", y: 28.8},
+                            {label: "Ohio", y: 22.4},
+                            {label: "Pennsylvania", y: 32.9},
+                            {label: "Texas", y: 31.7}
+                        ],
+                        yValueFormatString: "##.#\"%\"",
+                    }
+                    
+                    ]
+                });
+                chart.render();
+            }
+        </script>
+    </head>
+    <body onload="render()" >
+        <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+        <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+        <p> Wage theft is defined as any action involving paying a worker less than they should be earning according to their listed wage for the hours they worked, including violating overtime pay laws. Among people who work minimum wage jobs, a remarkably high percentage experience wage theft. In the ten most populous states in the US, at least 20% of the earned wages from minimum-wage workers are not paid, as is shown in the graph above. The workers whose wages are being stolen are generally people who are already disadvantaged. As the article states, “women are paid less to begin with and thus are left even worse off after their wages are stolen.” Wage theft is more common against women, younger people, people of color, non-US citizens, and unmarried people. Generally, it hurts the people who are already struggling to make do with what they have. The most common industry for wage theft to occur in is the service industry, particularly food and drink service. The process for recovering stolen wages is arduous and much harder than it needs to be, making it very difficult for people to get the money they rightfully deserve from their employers, and when an employer is discovered to be engaging in wage theft, there is barely any penalty. This effectively incentivises companies to steal from their employees, which should not be the case. One thing that helps decrease wage theft is unions. Workers not in unions are about twice as likely to experience wage theft than those in unions. In order to stop wage theft from occurring as much, or at least to lower the effect it has on the people being stolen from, the minimum wage needs to be increased at a federal level, and laws regarding wage theft need to be put in place and enforced. </p>
+    </body>
 </html>
